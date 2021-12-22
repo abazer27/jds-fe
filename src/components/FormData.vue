@@ -405,7 +405,7 @@ export default {
   },
   mounted() {
     axios
-      .get(`http://www.emsifa.com/api-wilayah-indonesia/api/provinces.json`)
+      .get(`https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json`)
       .then((response) => (this.provinsiData = response.data));
   },
   methods: {
@@ -443,7 +443,7 @@ export default {
       this.province_id = id;
       axios
         .get(
-          `http://www.emsifa.com/api-wilayah-indonesia/api/regencies/${this.province_id}.json`
+          `https://www.emsifa.com/api-wilayah-indonesia/api/regencies/${this.province_id}.json`
         )
         .then((response) => (this.kabData = response.data));
     },
@@ -452,7 +452,7 @@ export default {
       this.regency_id = id;
       axios
         .get(
-          `http://www.emsifa.com/api-wilayah-indonesia/api/districts/${this.regency_id}.json`
+          `https://www.emsifa.com/api-wilayah-indonesia/api/districts/${this.regency_id}.json`
         )
         .then((response) => (this.kecData = response.data));
     },
@@ -461,7 +461,7 @@ export default {
       this.district_id = id;
       axios
         .get(
-          `http://www.emsifa.com/api-wilayah-indonesia/api/villages/${this.district_id}.json`
+          `https://www.emsifa.com/api-wilayah-indonesia/api/villages/${this.district_id}.json`
         )
         .then((response) => (this.kelData = response.data));
     },
